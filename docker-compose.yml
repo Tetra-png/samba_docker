@@ -1,0 +1,23 @@
+version: "3"
+services: 
+  samba:
+    image: tetra61/samba:1.0
+    container_name: smb
+    restart: always
+    ports: 
+      - 139:139
+      - 445:445
+    
+    env_file:
+       - user_auth.env
+    
+    #environment:
+    #  - USERNAME: hoge
+    #  - PASSWD: fuga
+
+    volumes:
+      # client permissions
+      # private USERNAME:USERNAME 755
+      # public root:root 777
+      - /mnt/disk0/samba/${USERNAME}:/home/${USERNAME}
+      - /mnt/disk0/samba/public:/home/public 
