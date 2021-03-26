@@ -14,7 +14,7 @@ services:
 
     volumes:
       # client permissions
-      # private USERNAME:USERNAME 755
+      # private USERNAME:USERNAME 700
       # public root:root 777
       - /mnt/disk0/samba/hoge:/home/hoge
       - /mnt/disk0/samba/public:/home/public 
