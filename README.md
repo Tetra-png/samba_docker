@@ -21,3 +21,8 @@ docker-compose.ymlのvolumesに
 ```
 - ホストマシンのディレクトリ:/home/public
 ```
+
+### 起動
+```
+docker-compose up -d
+```
